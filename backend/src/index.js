@@ -3,6 +3,7 @@ import 'dotenv/config';
 import { app } from './app.js';
 import morgan from 'morgan';
 import logger from './utils/logger.js';
+import connectDB from './db/index.js';
 
 const PORT = process.env.PORT || 3000;
 const morganFormat = ':method :url :status :response-time ms';
@@ -33,6 +34,12 @@ app.get('/', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
-});
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server is running at http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log('Mongo Db Error: ', err);
+  });
