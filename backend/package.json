@@ -5,9 +5,8 @@
   "keywords": [
     "Arafat",
     "Alim",
-    "Full",
-    "Stack",
-    "Developer",
+    "Full Stack Developer",
+    "Portfolio",
     "MERN"
   ],
   "license": "ISC",
@@ -32,6 +31,7 @@
     "prettier": "^3.6.2"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.0.0",
     "express": "^5.1.0",
     "mongoose": "^8.16.1",
