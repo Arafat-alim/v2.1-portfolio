@@ -1,5 +1,5 @@
 import { ContactSubmission } from '../models/contact.model.js';
-import { Visitor } from '../models/Visitor.models.js';
+import { Visitor } from '../models/visitor.models.js';
 
 const handleAdminGetVisitors = async (req, res) => {
   try {

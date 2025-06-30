@@ -1,5 +1,5 @@
 import { ContactSubmission } from '../models/contact.model.js';
-import { Visitor } from '../models/Visitor.models.js';
+import { Visitor } from '../models/visitor.models.js';
 import { sendDiscordNotification } from '../utils/sendDiscordNotification.js';
 
 const handleGetVisitor = async (req, res) => {
