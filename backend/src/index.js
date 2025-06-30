@@ -7,6 +7,7 @@ import connectDB from './db/index.js';
 import { appRouter } from './routes/appRoutes.js';
 import { authRouter } from './routes/authRoutes.js';
 import { adminRouter } from './routes/adminRoutes.js';
+import { authMiddleware } from './middlewares/authMiddleware.js';
 
 const PORT = process.env.PORT || 3000;
 const morganFormat = ':method :url :status :response-time ms';
@@ -30,7 +31,7 @@ app.use(
 
 app.use('/api', appRouter);
 app.use('/api/auth', authRouter);
-// app.use('/api/admin', adminRouter);
+app.use('/api/admin', authMiddleware, adminRouter);
 
 app.get('/', (req, res) => {
   res.status(201).json({
