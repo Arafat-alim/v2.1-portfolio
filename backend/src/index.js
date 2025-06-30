@@ -1,6 +1,6 @@
 import 'dotenv/config';
 
-import { app } from './app.js';
+import app from './app.js';
 import morgan from 'morgan';
 import logger from './utils/logger.js';
 import connectDB from './db/index.js';
@@ -49,3 +49,5 @@ connectDB()
   .catch((err) => {
     console.log('Mongo Db Error: ', err);
   });
+
+export default app;
