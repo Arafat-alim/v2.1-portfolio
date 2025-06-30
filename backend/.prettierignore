@@ -1,0 +1,21 @@
+# Ignore Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Ignore Dependency Directories
+node_modules/
+
+# Ignore Build Output
+dist/
+build/
+
+# Ignore Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
